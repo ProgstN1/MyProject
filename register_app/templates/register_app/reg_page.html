@@ -1,0 +1,29 @@
+{% extends 'content.html' %}
+{% block title %}
+    contacts
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="container">
+      <form method="post">
+        {% csrf_token %}
+        <h2>Регистрация</h2>
+        <div class="form-group">
+          <label for="username">Имя пользователя:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm_password">Подтвердите пароль:</label>
+          <input type="password" id="confirm_password" name="confirm_password" required>
+        </div>
+        <input type="submit" value="Зарегистрироваться" class="btn">
+      </form>
+    </div>
+
+{% endblock %}
